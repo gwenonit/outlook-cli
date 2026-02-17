@@ -55,7 +55,6 @@ class EmailClient:
         # Microsoft Graph supports $search parameter
         params = {
             '$top': max_results,
-            '$orderby': 'receivedDateTime desc',
             '$select': 'id,subject,from,receivedDateTime,bodyPreview',
             '$search': f'"{query}"'
         }
